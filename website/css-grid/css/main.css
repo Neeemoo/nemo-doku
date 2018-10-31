@@ -7,78 +7,33 @@
 
 body {
   font-family: ubuntu;
-  background: var(--background)
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-areas:
-  "title title"
-  "header header"
-  "sidebar sidebar"
-  "content content"
-  "footer footer";
-}
+header {
+  padding: 10px 20px;
 
-.title {
-  grid-area: title;
   background: var(--darkgrey);
-  border-bottom-style: solid;
-  border-color: var(--orange);
   color: var(--white);
+
+  box-shadow: 0 2px 30px var(--black);
 }
 
-.header {
-  grid-area: header;
-  background: var(--lightgrey);
-  border-bottom-style: solid;
-  border-color: var(--darkgrey);
-  color: var(--white)
+main {
+  padding: 10px 20px;
+
+  color: var(--darkgrey);
 }
 
-.sidebar {
-  grid-area: sidebar;
-}
-
-.content {
-  grid-area: content;
-}
-
-.footer {
-  grid-area: footer;
-  display: grid;
-  background: var(--darkgrey);
-  border-top-style: solid;
-  border-color: var(--orange);
-  color: var(--white);
-}
-
-h1 {
-  text-align: center;
-}
-
-h1::after {
-  content: "►";
+a {
+  text-decoration: none;
   color: var(--orange);
 }
 
-h1::before {
-  content: "◄";
-  color: var(--orange);
-}
+footer {
+  padding: 10px 20px;
 
-@media screen and (min-width: 736px)
-{
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 500px 500px 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-    ". title title ."
-    ". header header ."
-    ". sidebar content ."
-    ". footer footer .";
-  }
+  background: var(--darkgrey);
+  color: var(--white);
+
+  box-shadow: 0 -2px 30px var(--black);
 }
