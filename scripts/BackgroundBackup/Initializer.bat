@@ -1,1 +1,0 @@
-C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Unrestricted  -WindowStyle Hidden -File "D:\DATA\IT\Programming\scripts\BackgroundBackup\BackgroundBackup.ps1" > "D:\DATA\IT\Programming\scripts\BackgroundBackup\log.txt"
