@@ -13,6 +13,8 @@ header {
   background: var(--darkgrey);
   color: var(--white);
   box-shadow: 0 2px 30px var(--black);
+  width: 100%;
+  position: fixed;
 }
 
 nav ul {
@@ -65,6 +67,10 @@ main {
 a {
   text-decoration: none;
   color: var(--orange);
+}
+
+.placeholder {
+  height: 540px;
 }
 
 footer {
