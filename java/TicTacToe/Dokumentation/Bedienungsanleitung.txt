@@ -1,3 +1,0 @@
-Auf einem 3x3 grossem Spielfeld müssen 2 Spieler (in diesem Fall Sie gegen den Computer) abwechselnd ihre Zeichen (entweder Kreuz oder Kreis) in ein leeres Feld setzen und dabei Gewinnt der Spieler der zu erst 3 seiner Zeichen neben einander Platziert. 
-Dabei kommt es nicht darauf an ob diese Horizontal, Vertikal oder Diagonal nebeneinander Stehen.
-Wenn alle 9 Felder Besetzt sind ohne das 3 der gleichen Zeichen nebeneinander Stehen ist das Spiel zu ende und es ist Unentschieden.
