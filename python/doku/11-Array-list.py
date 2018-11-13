@@ -44,13 +44,13 @@ thislist = ["apple", "banana", "cherry"]
 print(len(thislist))
 #output = 3
 
-#add a value to the lsit
+# add a value to the lsit
 thislist = ["apple", "banana", "cherry"]
 thislist.append("orange")
 print(thislist)
 #output = ['apple', 'banana', 'cherry', 'orange']
 
-#add a value at a certain position in the list
+# add a value at a certain position in the list
 thislist = ["apple", "banana", "cherry"]
 thislist.insert(1, "orange")
 print(thislist)
