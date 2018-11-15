@@ -1,7 +1,7 @@
 package m226b.ifz724004a.tictactoe;
 
-public class SpielFeld extends Player{
-    
+public class SpielFeld extends Item {
+	
 	public void spielFeld() {
 		System.out.println("");
 		System.out.println("       |     |     ");

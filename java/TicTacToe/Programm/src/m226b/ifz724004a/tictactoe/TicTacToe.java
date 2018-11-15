@@ -8,6 +8,7 @@ public class TicTacToe {
 		
 		feld.spielFeld();
 		p1.player();
+		feld.spielFeld();
 	}
 
 }
