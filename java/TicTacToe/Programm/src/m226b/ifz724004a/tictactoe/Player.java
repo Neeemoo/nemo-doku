@@ -3,7 +3,6 @@ package m226b.ifz724004a.tictactoe;
 import m226b.ifz724004a.utils.ConsoleReader;
 
 public class Player extends Item {
-
 	
 	public void player() {
 		int zug;
@@ -35,3 +34,4 @@ public class Player extends Item {
 			}
 		}while (zug < 1 || zug > 9);
 	}
+}
