@@ -145,7 +145,7 @@ public abstract class ConsoleReader {
             }
             catch (NumberFormatException ex)
             {
-                System.out.println("*** Conversion Error ***, try again");
+                System.out.println("*** Error ***, Bitte geben Sie eine Zahl ein");
             }
         }
         return value;
