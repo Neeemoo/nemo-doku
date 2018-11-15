@@ -35,4 +35,3 @@ public class Player extends Item {
 			}
 		}while (zug < 1 || zug > 9);
 	}
-}
