@@ -1,5 +1,7 @@
 package m226b.ifz724004a.tictactoe;
 
+import m226b.ifz724004a.utils.ConsoleReader;
+
 public class Board {		
 	private String[][] board;
 	private static final int row = 3;
@@ -18,14 +20,56 @@ public class Board {
 		}
 	}
 	
-	public void setPlay(int x, int y, String player) {
-		if (board[x][y].matches(coordinates)) {
-			if (player == "X") {
-				board[x][y] = " X ";
-			} else {
-				board[x][y] = " O ";
+	public void setPlay(String player) {
+		int feld;
+		int x = 0; 
+		int y = 0;
+		do {
+			feld = ConsoleReader.readInteger("Geben Sie ein verfügbares Feld ein um darauf Ihr Zeichen zu setzten");
+			if (feld == 9) {
+				x = 0;
+				y = 2;
+			} 
+			else if (feld == 8) {
+				x = 0;
+				y = 1;
 			}
-		}
+			else if (feld == 7) {
+				x = 0;
+				y = 0;
+			}
+			else if (feld == 6) {
+				x = 1;
+				y = 2;
+			}
+			else if (feld == 5) {
+				x = 1;
+				y = 1;
+			}
+			else if (feld == 4) {
+				x = 1;
+				y = 0;
+			}
+			else if (feld == 3) {
+				x = 2;
+				y = 2;
+			}
+			else if (feld == 2) {
+				x = 2;
+				y = 1;
+			}
+			else if (feld == 1) {
+				x = 2;
+				y = 0;
+			}
+		} while (feld < 1 || feld > 9 || board[x][y].matches("X") || board[x][y].matches("O"));
+			if (board[x][y].matches(coordinates)) {
+					if (player == "X") {
+						board[x][y] = " X ";
+					} else {
+						board[x][y] = " O ";
+					}	
+			}
 	}
 	
 	public boolean gameOver() {
@@ -39,13 +83,14 @@ public class Board {
     	
 		//columns
     	for(int y = 0; y < col; y++) {    		
-    		if(!board[0][y].matches(coordinates) && board[0][y].equals(board[1][y]) && board[1][y].equals(board[2][y])) 
-   			return true;  			
+    		if(!board[0][y].matches(coordinates) && board[0][y].equals(board[1][y]) && board[1][y].equals(board[2][y])) {
+    			return true;  		
+    		}
     	}
     	
 	   	//diagonals
 	   	if(!board[0][0].matches(coordinates) && board[0][0].equals(board[1][1]) && board[1][1].equals(board[2][2])) {
-	   		return true;
+	   			return true;
 		}
 	   	
 	   	if(!board[0][2].matches(coordinates) && board[0][2].equals(board[1][1]) && board[1][1].equals(board[2][0])) {
