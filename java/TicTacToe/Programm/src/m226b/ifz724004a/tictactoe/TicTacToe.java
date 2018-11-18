@@ -6,15 +6,16 @@ public class TicTacToe {
 
 	public static void main(String[] args) {
 		String restart = "y";
-//		String anleitung;
 		Programmstart start = new Programmstart();
 		
 		start.info();
 		
-//		anleitung = ConsoleReader.readString("Geben Sie \"help\" ein um die Spielanleitung zu sehen");
-//		if (anleitung == "help") {
-//			start.anleitung();
-//		}
+		String anleitung = ConsoleReader.readString("Wollen Sie zuerst die Spielanleitung lesen?");
+		if (anleitung.equalsIgnoreCase("y") || anleitung.equalsIgnoreCase("yes") || anleitung.equalsIgnoreCase("j") || anleitung.equalsIgnoreCase("ja")) {
+			start.anleitung();
+		} else {
+			System.out.println("\n");
+		}
 		
 		do {
 		
@@ -38,7 +39,7 @@ public class TicTacToe {
 					player = "X";
 				}
 			} while (true);
-			restart = ConsoleReader.readString("Wollen Sie nochmal spielen");
+			restart = ConsoleReader.readString("Wollen Sie nochmal spielen?");
 		} while (restart.equalsIgnoreCase("y") || restart.equalsIgnoreCase("yes") || restart.equalsIgnoreCase("j") || restart.equalsIgnoreCase("ja"));
 	}
 }

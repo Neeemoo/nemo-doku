@@ -62,7 +62,7 @@ public class Board {
 				x = 2;
 				y = 0;
 			}
-		} while (feld < 1 || feld > 9 || board[x][y].matches("X") || board[x][y].matches("O"));
+		} while (feld < 1 || feld > 9 || board[x][y].matches(" X ") || board[x][y].matches(" O "));
 			if (board[x][y].matches(coordinates)) {
 					if (player == "X") {
 						board[x][y] = " X ";

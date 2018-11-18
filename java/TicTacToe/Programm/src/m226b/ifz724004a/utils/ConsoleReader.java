@@ -195,7 +195,7 @@ public abstract class ConsoleReader {
         {
             try
             {
-                System.out.print(prompt + ": ");
+                System.out.print(prompt + " ");
                 value = reader.readLine();
                 break;
             }
