@@ -20,10 +20,39 @@ public class Board {
 		}
 	}
 	
-	public String[][] setPlay(String player) {
+	public String printBoard() {
+		String strBoard = "";
+		for (int x = 0; x < row; x++) {
+			for (int y = 0; y < col; y++) {
+				if (y == col - 1) {
+					strBoard = strBoard + board[x][y];
+				} else {
+					strBoard = strBoard + board[x][y] + "|";
+				}
+			}
+			
+			if (x != row - 1) {
+			strBoard = strBoard + "\n---|---|---\n";
+			}
+		}
+		System.out.println("\n");
+		return strBoard;
+	}
+	
+	public void firstPrint() {
+		System.out.println(" 7 | 8 | 9 ");
+		System.out.println("---|---|---");
+		System.out.println(" 4 | 5 | 6 ");
+		System.out.println("---|---|---");
+		System.out.println(" 1 | 2 | 3 ");
+		System.out.println("\n");
+	}
+	
+	public String[][] playTurn(String player) {
 		int feld;
 		int x = 0; 
 		int y = 0;
+		
 		do {
 			feld = ConsoleReader.readInteger("Geben Sie ein verfügbares Feld ein um darauf Ihr Zeichen zu setzten");
 			if (feld == 9) {
@@ -63,17 +92,13 @@ public class Board {
 				y = 0;
 			}
 		} while (feld < 1 || feld > 9 || board[x][y].matches(" X ") || board[x][y].matches(" O "));
-		
-			if (player == "X") {
-				board[x][y] = " X ";
-			} else {
-				board[x][y] = " O ";
-			}
-			
-			return board;
+		if (player == "X") {
+			board[x][y] = " X ";
+		}
+		return board;
 	}
 	
-	public boolean gameOver(String player) {
+	public boolean winner(String player) {
 		
 		if (board[0][0].matches(" " + player + " ") && board[0][1].matches(" " + player + " ") && board[0][2].matches(" " + player + " ")) {
 			return true;
@@ -114,21 +139,11 @@ public class Board {
 	   	return false;
 	}
 	
-	public String printBoard() {
-		String strBoard = "";
-		for (int x = 0; x < row; x++) {
-			for (int y = 0; y < col; y++) {
-				if (y == col - 1) {
-					strBoard = strBoard + board[x][y];
-				} else {
-					strBoard = strBoard + board[x][y] + "|";
-				}
-			}
-			
-			if (x != row - 1) {
-			strBoard = strBoard + "\n---|---|---\n";
-			}
+	public boolean draw() {
+		if (!board[0][0].equals("   ") && !board[0][1].equals("   ") && !board[0][2].equals("   ") && !board[1][0].equals("   ") && !board[1][1].equals("   ") && !board[1][2].equals("   ") && !board[2][0].equals("   ") && !board[2][1].equals("   ") && !board[2][2].equals("   ")) {
+			return true;
 		}
-		return strBoard;
+		//no draw
+		return false;
 	}
 }

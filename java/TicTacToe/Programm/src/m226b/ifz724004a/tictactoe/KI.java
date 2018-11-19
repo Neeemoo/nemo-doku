@@ -1,7 +1,7 @@
 package m226b.ifz724004a.tictactoe;
 
 public class KI {
-	public void kiTurn(String[][] fields, String player) {
+	public String[][] kiTurn(String[][] fields, String player) {
 		int kiZug;
 		int x = 0; 
 		int y = 0;
@@ -46,10 +46,7 @@ public class KI {
 			}
 		} while (fields[x][y].matches(" X ") || fields[x][y].matches(" O "));
 		
-			if (player == "X") {
-				fields[x][y] = " X ";
-			} else {
-				fields[x][y] = " O ";
-			}
+		fields[x][y] = " O ";
+		return fields;
 	}
 }

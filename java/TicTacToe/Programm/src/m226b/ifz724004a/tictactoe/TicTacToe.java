@@ -8,36 +8,54 @@ public class TicTacToe {
 		String restart = "y";
 		Programmstart start = new Programmstart();
 		
+		
 		start.info();
 		
 		String anleitung = ConsoleReader.readString("Wollen Sie zuerst die Spielanleitung lesen?");
-		if (anleitung.equalsIgnoreCase("y") || anleitung.equalsIgnoreCase("yes") || anleitung.equalsIgnoreCase("j") || anleitung.equalsIgnoreCase("ja")) {
+		if (anleitung.equalsIgnoreCase("j") || anleitung.equalsIgnoreCase("ja") || anleitung.equalsIgnoreCase("y") || anleitung.equalsIgnoreCase("yes")) {
 			start.anleitung();
 		} else {
 			System.out.println("\n");
 		}
 		
 		do {
-		
-			KI ki = new KI();
+			String bot = ConsoleReader.readString("Wählen Sie ein Schwierigkeitsgrad easy | difficult: ");
+			System.out.println("\n");
 			Board board = new Board();
 			board.initializeBoard();
+			board.firstPrint();
 			String player = "X";
-			String[][] fields = board.setPlay(player);
-			
+			EasyKI kiE = new EasyKI();
+			DifficultKI kiM = new DifficultKI();
+			String spielFeld[][] = board.playTurn(player);
+			if (bot.equalsIgnoreCase("e") || bot.equalsIgnoreCase("easy") || bot.equalsIgnoreCase("einfach") || bot.equalsIgnoreCase("ez")) {
+				kiE.kiTurn(spielFeld, player);
+			} else {
+				kiM.kiTurn(spielFeld, player);
+			}
 			
 			do {
 				System.out.println(board.printBoard());
 				
-				
 				if (player == "X") {
-					board.setPlay(player);
+					System.out.println("X ist am Zug");
+					board.playTurn(player);
 				} else {
-					ki.kiTurn(fields, player);
+					if (bot.equalsIgnoreCase("e") || bot.equalsIgnoreCase("easy") || bot.equalsIgnoreCase("einfach") || bot.equalsIgnoreCase("ez")) {
+						System.out.println("Easy KI");
+						kiE.kiTurn(spielFeld, player);
+					} else {
+						System.out.println("Difficult KI");
+						kiM.kiTurn(spielFeld, player);
+					}
 				}
 						
-				if (board.gameOver(player)) {
-					System.out.println(board.printBoard() + "\n" + player + " gewinnt");
+				if (board.winner(player)) {
+					System.out.println(board.printBoard() + "\n" + player + " gewinnt\n");
+					break;
+				}
+				else if (board.draw()) {
+					System.out.println(board.printBoard() + "\nUnentschieden\n");
 					break;
 				}
 				
@@ -47,7 +65,8 @@ public class TicTacToe {
 					player = "X";
 				}
 			} while (true);
+			
 			restart = ConsoleReader.readString("Wollen Sie nochmal spielen?");
-		} while (restart.equalsIgnoreCase("y") || restart.equalsIgnoreCase("yes") || restart.equalsIgnoreCase("j") || restart.equalsIgnoreCase("ja"));
+		} while (restart.equalsIgnoreCase("j") || restart.equalsIgnoreCase("ja") || restart.equalsIgnoreCase("y") || restart.equalsIgnoreCase("yes"));
 	}
 }
