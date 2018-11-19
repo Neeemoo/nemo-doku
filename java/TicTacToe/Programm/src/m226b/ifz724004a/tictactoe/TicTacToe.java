@@ -19,16 +19,24 @@ public class TicTacToe {
 		
 		do {
 		
+			KI ki = new KI();
 			Board board = new Board();
 			board.initializeBoard();
 			String player = "X";
+			String[][] fields = board.setPlay(player);
+			
 			
 			do {
 				System.out.println(board.printBoard());
 				
-				board.setPlay(player);
 				
-				if (board.gameOver()) {
+				if (player == "X") {
+					board.setPlay(player);
+				} else {
+					ki.kiTurn(fields, player);
+				}
+						
+				if (board.gameOver(player)) {
 					System.out.println(board.printBoard() + "\n" + player + " gewinnt");
 					break;
 				}

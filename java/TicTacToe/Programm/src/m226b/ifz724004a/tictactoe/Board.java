@@ -6,7 +6,7 @@ public class Board {
 	private String[][] board;
 	private static final int row = 3;
 	private static final int col = 3;
-	private String coordinates = "\\s{3}";
+
 	
 	public Board() {
 		board = new String[row][col];
@@ -20,7 +20,7 @@ public class Board {
 		}
 	}
 	
-	public void setPlay(String player) {
+	public String[][] setPlay(String player) {
 		int feld;
 		int x = 0; 
 		int y = 0;
@@ -63,40 +63,53 @@ public class Board {
 				y = 0;
 			}
 		} while (feld < 1 || feld > 9 || board[x][y].matches(" X ") || board[x][y].matches(" O "));
-			if (board[x][y].matches(coordinates)) {
-					if (player == "X") {
-						board[x][y] = " X ";
-					} else {
-						board[x][y] = " O ";
-					}	
+		
+			if (player == "X") {
+				board[x][y] = " X ";
+			} else {
+				board[x][y] = " O ";
 			}
+			
+			return board;
 	}
 	
-	public boolean gameOver() {
+	public boolean gameOver(String player) {
 		
-		//rows
-		for(int x = 0; x < row; x++) {
-    		if(!board[x][0].matches(coordinates) && board[x][0].equals(board[x][1]) && board[x][1].equals(board[x][2])) {    			
-    			return true; 
-    		}   			 			
-    	}
-    	
-		//columns
-    	for(int y = 0; y < col; y++) {    		
-    		if(!board[0][y].matches(coordinates) && board[0][y].equals(board[1][y]) && board[1][y].equals(board[2][y])) {
-    			return true;  		
-    		}
-    	}
-    	
-	   	//diagonals
-	   	if(!board[0][0].matches(coordinates) && board[0][0].equals(board[1][1]) && board[1][1].equals(board[2][2])) {
-	   			return true;
+		if (board[0][0].matches(" " + player + " ") && board[0][1].matches(" " + player + " ") && board[0][2].matches(" " + player + " ")) {
+			return true;
 		}
-	   	
-	   	if(!board[0][2].matches(coordinates) && board[0][2].equals(board[1][1]) && board[1][1].equals(board[2][0])) {
-	   		return true;
+		
+		if (board[1][0].matches(" " + player + " ") && board[1][1].matches(" " + player + " ") && board[1][2].matches(" " + player + " ")) {
+			return true;
 		}
-	   	
+		
+		if (board[2][0].matches(" " + player + " ") && board[2][1].matches(" " + player + " ") && board[2][2].matches(" " + player + " ")) {
+			return true;
+		}
+		
+		
+
+		if (board[0][0].matches(" " + player + " ") && board[1][0].matches(" " + player + " ") && board[2][0].matches(" " + player + " ")) {
+			return true;
+		}
+		
+		if (board[0][1].matches(" " + player + " ") && board[1][1].matches(" " + player + " ") && board[2][1].matches(" " + player + " ")) {
+			return true;
+		}
+		
+		if (board[2][0].matches(" " + player + " ") && board[2][1].matches(" " + player + " ") && board[2][2].matches(" " + player + " ")) {
+			return true;
+		}
+		
+		
+		if (board[0][0].matches(" " + player + " ") && board[1][1].matches(" " + player + " ") && board[2][2].matches(" " + player + " ")) {
+			return true;
+		}
+		
+		if (board[0][2].matches(" " + player + " ") && board[1][1].matches(" " + player + " ") && board[2][0].matches(" " + player + " ")) {
+			return true;
+		}
+		
 	   	//no winner
 	   	return false;
 	}
@@ -113,7 +126,7 @@ public class Board {
 			}
 			
 			if (x != row - 1) {
-			strBoard = strBoard + "\n---+---+---\n";
+			strBoard = strBoard + "\n---|---|---\n";
 			}
 		}
 		return strBoard;
