@@ -4,14 +4,15 @@ set ESC=
 set Red=%ESC%[91m
 set White=%ESC%[37m
 
+echo.
 echo %Red%     An
 echo      nAnnnn
 echo      nnnAnnnnnn
 echo      nnnnAnnnnnnnnn
-echo      nnnnnnAnnnnnnnnnnn											IP-Adresse:
+echo      nnnnnnAnnnnnnnnnnn
 echo      nnnnnnnAnnnnnnnnnnnnnn
 echo      n             nnnnnnnnnnnn
-echo                     nnnnnnnnnnnnnnn								MAC-Adresse:
+echo                     nnnnnnnnnnnnnnn
 echo          nnnnnnn    nnnnnnnnnnnnnnnnnnn
 echo          nnnnnnn    nnnnnnnnnnnnnnnnnnnnnnn
 echo          nnnnnnn    NNNNNNNNNNNNNNNNNNNNNNNNNNN
@@ -26,3 +27,6 @@ echo      nnnVnnnnnn
 echo      nVnnnn
 echo      Vn
 echo %White%
+
+cd D:\DATA
+dir /B /OG
