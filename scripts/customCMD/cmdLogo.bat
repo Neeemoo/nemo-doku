@@ -30,3 +30,11 @@ echo %White%
 
 cd D:\DATA
 dir /B /OG
+
+SET /P _inputname= Please enter an input:
+IF "%_inputname%"!="doku" GOTO :github
+echo cd IT\Github
+:github
+IF "%_inputname%"!="python" GOTO :python
+echo cs IT\Github\nemo-doku\python
+:python
