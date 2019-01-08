@@ -64,6 +64,10 @@ img.headerlogo {
   cursor: pointer;
 }
 
+.active {
+  border-bottom: 2px solid var(--orange);
+}
+
 main {
   padding: 10px 20px;
   color: var(--darkgrey);
