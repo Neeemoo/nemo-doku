@@ -60,13 +60,26 @@ footer {
   }
 
   #goto {
+    padding: 15px 25px;
+    color: var(--white);
+    background: var(--darkgrey);
     display: block;
     text-transform: uppercase;
-    margin-bottom: 5px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px var(--black);
     position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 9990;
+  }
+
+  #goto:hover {
+    background: var(--grey);
+    box-shadow: 0 2px 20px var(--black);
+    padding: 16px 26px;
   }
 
   nav ul li a {
-    width: 50vw!important;
+    width: 50vw;
   }
 }
