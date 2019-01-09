@@ -59,9 +59,13 @@ footer {
     grid-row: 3 / 4;
   }
 
-  .placeholder {
-    display: none;
+  #goto {
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    position: fixed;
   }
+
   nav ul li a {
     width: 50vw!important;
   }
