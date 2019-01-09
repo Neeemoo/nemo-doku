@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: ubuntu;
 }
@@ -41,20 +45,6 @@ nav ul li a:hover {
   background: var(--lightgrey);
 }
 
-nav ul li ul {
-  position: absolute;
-  display: none;
-}
-
-nav ul li:hover ul,
-nav ul li ul li {
-  display: block;
-}
-
-nav ul li:hover ul li a {
-  box-shadow: 0 2px 5px var(--black);
-}
-
 img.headerlogo {
   position: absolute;
   top: 10px;
@@ -75,11 +65,56 @@ main {
 
 a {
   text-decoration: none;
-  color: var(--orange);
 }
 
 .placeholder {
   height: 542px;
+}
+
+h1 {
+  padding-top: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#Block01 {
+  padding-bottom: 13.4px;
+}
+
+#Block02,
+#Block03,
+#Block04,
+#Block05,
+#Block06,
+#Block07,
+#Block08,
+#Block09,
+#Block10 {
+  padding-top: 70px;
+}
+
+aside {
+  padding-top: 0;
+  width: 200px;
+  margin-top: 100px;
+  position: fixed;
+}
+
+.aside {
+  color: var(--white);
+  width: 200px;
+  display: block;
+  text-align: center;
+  background: var(--darkgrey);
+  padding: 17px 0;
+  transition-duration: 0.3s;
+  box-shadow: 0 2px 5px var(--black);
+}
+
+.aside:hover {
+  background: var(--lightgrey);
+  padding-right: 5px;
+  box-shadow: 0 2px 20px var(--black);
 }
 
 footer {
@@ -90,6 +125,7 @@ footer {
 }
 
 .mail {
+  color: var(--orange);
   border: none;
   position: relative;
   transition-duration: 0.3s;
