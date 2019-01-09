@@ -13,6 +13,7 @@ body {
   font-family: ubuntu;
 }
 
+
 header {
   background: var(--darkgrey);
   color: var(--white);
@@ -45,6 +46,12 @@ nav ul li a:hover {
   background: var(--lightgrey);
 }
 
+@media only screen and (max-width: 480px) {
+  nav ul li a {
+    width: 50vw;
+  }
+}
+
 img.headerlogo {
   position: absolute;
   top: 10px;
@@ -61,8 +68,9 @@ img.headerlogo {
 }
 
 .active {
-  border-bottom: 2px solid var(--orange);
+  border-bottom: 1.3px solid var(--white);
 }
+
 
 main {
   padding: 10px 20px;
@@ -99,6 +107,7 @@ h1 {
   padding-top: 70px;
 }
 
+
 aside {
   background: var(--grey);
   width: 200px;
@@ -126,6 +135,39 @@ aside {
 #goto {
   display: none;
 }
+
+.gotocontent {
+  background: var(--grey);
+  position: fixed;
+  bottom: 80px;
+  right: 10px;
+  left: 10px;
+  padding: 90px 0;
+}
+
+@media only screen and (max-width: 480px) {
+  #goto {
+    border-width: 1.3px;
+    padding: 15px 25px;
+    color: var(--white);
+    background: var(--darkgrey);
+    display: block;
+    text-transform: uppercase;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px var(--black);
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 9990;
+  }
+
+  #goto:hover {
+    background: var(--grey);
+    box-shadow: 0 2px 20px var(--black);
+    padding: 16px 26px;
+  }
+}
+
 
 footer {
   padding: 10px 20px;
@@ -158,30 +200,4 @@ footer {
 .mail:hover:before {
   transform: scaleX(1);
   transition: transform 0.4s;
-}
-
-@media only screen and (max-width: 480px) {
-  #goto {
-    padding: 15px 25px;
-    color: var(--white);
-    background: var(--darkgrey);
-    display: block;
-    text-transform: uppercase;
-    border-radius: 15px;
-    box-shadow: 0 2px 10px var(--black);
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    z-index: 9990;
-  }
-
-  #goto:hover {
-    background: var(--grey);
-    box-shadow: 0 2px 20px var(--black);
-    padding: 16px 26px;
-  }
-
-  nav ul li a {
-    width: 50vw;
-  }
 }
