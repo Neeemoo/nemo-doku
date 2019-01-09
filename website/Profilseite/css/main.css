@@ -58,6 +58,7 @@ img.headerlogo {
   img.headerlogo {
     display: none;
   }
+}
 
 .active {
   border-bottom: 2px solid var(--orange);
@@ -160,10 +161,6 @@ footer {
 }
 
 @media only screen and (max-width: 480px) {
-  img.headerlogo {
-    display: none;
-  }
-
   #goto {
     padding: 15px 25px;
     color: var(--white);
