@@ -91,6 +91,23 @@ h1 {
   text-transform: uppercase;
 }
 
+iframe {
+  margin-top: 2.2px;
+  width: 700px;
+  height: 528px;
+  resize: horizontal;
+  max-width: 800px;
+  min-width: 400px;
+  overflow: auto;
+  border: 2px solid var(--darkgrey);
+}
+
+@media only screen and (max-width: 480px) {
+  iframe {
+    display: none;
+  }
+}
+
 #Block01 {
   padding-bottom: 13.4px;
 }

@@ -1,4 +1,4 @@
 function extend() {
-  var nav = document.getElementById("gotocontent");
-  nav.classList.toggle("weg");
+  var mobile_nav = document.getElementById("gotocontent");
+  mobile_nav.classList.toggle("weg");
 }
