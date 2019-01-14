@@ -132,6 +132,17 @@ aside {
   box-shadow: 0 2px 20px var(--black);
 }
 
+.mobileaside {
+  color: var(--white);
+  width: 175px;
+  display: block;
+  text-align: center;
+  background: var(--darkgrey);
+  padding: 17px 0;
+  transition-duration: 0.3s;
+  box-shadow: 0 2px 5px var(--black);
+}
+
 #goto {
   display: none;
 }
@@ -141,8 +152,7 @@ aside {
   position: fixed;
   bottom: 80px;
   right: 10px;
-  left: 10px;
-  padding: 90px 0;
+  padding: 0 0;
 }
 
 @media only screen and (max-width: 480px) {
