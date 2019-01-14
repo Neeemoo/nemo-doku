@@ -93,7 +93,7 @@ h1 {
 
 iframe {
   margin-top: 2.2px;
-  width: 700px;
+  width: 570px;
   height: 528px;
   resize: horizontal;
   max-width: 800px;
@@ -102,9 +102,18 @@ iframe {
   border: 2px solid var(--darkgrey);
 }
 
+.iframeError {
+  display: none;
+}
+
 @media only screen and (max-width: 480px) {
   iframe {
     display: none;
+  }
+
+  .iframeError {
+    display: block;
+    color: var(--red);
   }
 }
 
@@ -151,7 +160,7 @@ aside {
 
 .mobileaside {
   color: var(--white);
-  width: 175px;
+  width: 50vw;
   display: block;
   text-align: center;
   background: var(--darkgrey);
@@ -168,12 +177,14 @@ aside {
   background: var(--grey);
   position: fixed;
   bottom: 80px;
-  right: 10px;
-  padding: 0 0;
+  left: -140%;
+  padding: 0;
+  transition: 0.4s;
 }
 
-.weg {
-  display: none;
+#gotocontent.weg {
+  left: 0;
+  right: 10px;
 }
 
 @media only screen and (max-width: 480px) {
