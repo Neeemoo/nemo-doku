@@ -91,12 +91,16 @@ h1 {
   text-transform: uppercase;
 }
 
+.bloecke tr td {
+  vertical-align: top;
+}
+
 iframe {
   margin-top: 2.2px;
   width: 570px;
   height: 528px;
   resize: horizontal;
-  max-width: 800px;
+  max-width: 570px;
   min-width: 400px;
   overflow: auto;
   border: 2px solid var(--darkgrey);
@@ -115,6 +119,35 @@ iframe {
     display: block;
     color: var(--red);
   }
+}
+
+.accordion,
+.accordionContent {
+  margin-left: 20px;
+}
+
+.accordion {
+  display: none;
+  width: 574.4px;
+}
+
+.accordionTable {
+  margin-top: 10px;
+}
+
+.accordionTable,
+.accordionTable th,
+.accordionTable td {
+  border: 1px solid var(--darkgrey);
+  border-collapse: collapse;
+}
+
+.accordionTable td {
+  padding: 5px;
+}
+
+.accordionTable tr:nth-child(even) {
+  background-color: var(--lightestgrey);
 }
 
 #Block01 {
