@@ -1,3 +1,4 @@
 function extend() {
-  console.log("hi");
+  var nav = document.getElementById("gotocontent");
+  nav.classList.toggle("weg");
 }
