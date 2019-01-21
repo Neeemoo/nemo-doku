@@ -1,0 +1,121 @@
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 2;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-google-plus:before {
+  content: "\ea8b";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-vimeo:before {
+  content: "\eaa0";
+}
+.icon-behance:before {
+  content: "\eaa8";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+
+
+body {
+    margin: 0;
+    background: #7e9dca;
+}
+
+.change {
+  background: #b99ffc!important;
+}
+
+.change a {
+  color: #263c9b;
+}
+
+#content {
+    background: #ccc;
+    padding: 150px 0;
+}
+
+.text {
+    padding: 0 20px;
+    margin: 0 auto;
+    width: 1120px;
+}
+
+.body {
+    column-count: 3;
+    -moz-column-count: 3;
+    column-width: 30px;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 44px;
+    letter-spacing: 1px;
+    margin-top: 44px;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.title {
+    color: #50ade5;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+a {
+    color: #50ade5;
+}
+
+.center {
+    margin:50px auto;
+    max-width:1120px;
+
+}
+
+img.logo {
+    display:  block;
+    margin: 50px auto;
+    max-width: 500px;
+    transition: .6s ease-in-out 0s;
+}
+
+img.logo:hover {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    transform: rotate(-180deg);
+    -webkit-transform:rotate(-180deg);
+}
+
+.shadow:hover {
+    -webkit-filter:drop-shadow(5px 5px 10px #333);
+    filter:drop-shadow(5px 5px 5px #333);
+}
+
+.footer {
+    text-align: right;
+    font-size: 30px;
+    letter-spacing: 4px;
+    color: #50ade5;
+}
