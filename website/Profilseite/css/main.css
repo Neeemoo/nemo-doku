@@ -91,23 +91,29 @@ h1 {
   text-transform: uppercase;
 }
 
-.bloecke tr td {
-  vertical-align: top;
+.tagesjournal {
+  margin-bottom: 50px;
 }
 
 iframe {
   margin-top: 2.2px;
   width: 570px;
   height: 528px;
-  resize: horizontal;
-  max-width: 570px;
-  min-width: 400px;
-  overflow: auto;
   border: 2px solid var(--darkgrey);
+  float: left;
+  margin: 0 20px 0 0;
+  border-radius: 0 0 10px 10px;
 }
 
 .iframeError {
   display: none;
+}
+
+@media only screen and (max-width: 1300px) {
+  iframe {
+    float: none;
+    margin: 0 0 20px 0;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -121,18 +127,41 @@ iframe {
   }
 }
 
-.accordion,
-.accordionContent {
-  margin-left: 20px;
+#phone {
+  width: 574px;
+  background: var(--darkgrey);
+  color: var(--white);
+  border: none;
+  height: 30px;
+  border-radius: 10px 10px 0 0;
+}
+
+#phone:hover {
+  background: var(--grey);
+}
+
+@media only screen and (max-width: 480px) {
+  #phone {
+    display: none;
+  }
+}
+
+.smaller {
+  width: 480px;
 }
 
 .accordion {
   display: none;
   width: 574.4px;
+  margin-top: 30px;
 }
 
 .accordionTable {
-  margin-top: 10px;
+  margin: 10px 0 100px 0;
+}
+
+.accordionTable td {
+  padding: 5px;
 }
 
 .accordionTable,
@@ -142,12 +171,31 @@ iframe {
   border-collapse: collapse;
 }
 
-.accordionTable td {
-  padding: 5px;
+.accordionTable tr:nth-child(even) {
+  background: var(--lightestgrey);
 }
 
-.accordionTable tr:nth-child(even) {
-  background-color: var(--lightestgrey);
+.codeAccordion {
+  width: 40%;
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 480px) {
+  .accordion {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+  }
+
+  .active, .accordion:hover {
+    background: var(--grey);
+  }
+}
+
+.code {
+  background: var(--lightestgrey);
+  color: var(--black);
+  font-size: 16px;
 }
 
 #Block01 {
