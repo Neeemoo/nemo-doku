@@ -15,6 +15,7 @@ body {
 
 
 header {
+  z-index: 9999;
   background: var(--darkgrey);
   color: var(--white);
   box-shadow: 0 2px 5px var(--black);
@@ -103,6 +104,7 @@ iframe {
   float: left;
   margin: 0 20px 0 0;
   border-radius: 0 0 10px 10px;
+  transition: all 1s;
 }
 
 .iframeError {
@@ -134,6 +136,7 @@ iframe {
   border: none;
   height: 30px;
   border-radius: 10px 10px 0 0;
+  transition: all 1s;
 }
 
 #phone:hover {
@@ -147,13 +150,17 @@ iframe {
 }
 
 .smaller {
-  width: 480px;
+  width: 340px;
 }
 
 .accordion {
   display: none;
   width: 574.4px;
   margin-top: 30px;
+}
+
+.accordionContent {
+  display: none;
 }
 
 .accordionTable {
@@ -176,6 +183,7 @@ iframe {
 }
 
 .codeAccordion {
+  display: block;
   width: 40%;
   margin-top: 30px;
 }
@@ -196,6 +204,14 @@ iframe {
   background: var(--lightestgrey);
   color: var(--black);
   font-size: 16px;
+}
+
+audio {
+  max-width: 100%;
+}
+
+video {
+  max-width: 100%;
 }
 
 #Block01 {

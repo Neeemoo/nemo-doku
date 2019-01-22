@@ -10,10 +10,15 @@ function phone() {
   button = document.getElementById("phone");
   if (iframe.classList.contains("smaller")) {
     button.innerHTML = "Desktop View";
-    document.getElementById("phone").style.width = "484px";
+    document.getElementById("phone").style.width = "344px";
   }
   else {
     button.innerHTML = "Mobile View";
     document.getElementById("phone").style.width = "574px";
   }
+}
+
+function accordion() {
+  var extend = document.getElementsByClassName("accordionContent");
+  extend.classList.toggle("showAccordion");
 }
