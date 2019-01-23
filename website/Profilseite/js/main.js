@@ -11,14 +11,27 @@ function phone() {
   if (iframe.classList.contains("smaller")) {
     button.innerHTML = "Desktop View";
     document.getElementById("phone").style.width = "344px";
+    document.getElementById("iframe").style.marginRight = "250px";
   }
   else {
     button.innerHTML = "Mobile View";
     document.getElementById("phone").style.width = "574px";
+    document.getElementById("iframe").style.marginRight = "20px";
   }
 }
 
-function accordion() {
-  var extend = document.getElementsByClassName("accordionContent");
-  extend.classList.toggle("showAccordion");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("gotop").style.display = "block"
+  } else {
+    document.getElementById("gotop").style.display = "none";
+  }
+}
+
+function gotoTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }

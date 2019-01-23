@@ -13,7 +13,6 @@ body {
   font-family: ubuntu;
 }
 
-
 header {
   z-index: 9999;
   background: var(--darkgrey);
@@ -71,7 +70,6 @@ img.headerlogo {
 .active {
   border-bottom: 1.3px solid var(--white);
 }
-
 
 main {
   padding: 10px 20px;
@@ -153,51 +151,8 @@ iframe {
   width: 340px;
 }
 
-.accordion {
-  display: none;
-  width: 574.4px;
-  margin-top: 30px;
-}
-
-.accordionContent {
-  display: none;
-}
-
-.accordionTable {
-  margin: 10px 0 100px 0;
-}
-
-.accordionTable td {
-  padding: 5px;
-}
-
-.accordionTable,
-.accordionTable th,
-.accordionTable td {
-  border: 1px solid var(--darkgrey);
-  border-collapse: collapse;
-}
-
-.accordionTable tr:nth-child(even) {
-  background: var(--lightestgrey);
-}
-
-.codeAccordion {
-  display: block;
-  width: 40%;
-  margin-top: 30px;
-}
-
-@media only screen and (max-width: 480px) {
-  .accordion {
-    width: 100%;
-    display: block;
-    cursor: pointer;
-  }
-
-  .active, .accordion:hover {
-    background: var(--grey);
-  }
+.aufgabenTable {
+  
 }
 
 .code {
@@ -229,7 +184,6 @@ video {
 #Block10 {
   padding-top: 70px;
 }
-
 
 aside {
   background: var(--grey);
@@ -266,6 +220,31 @@ aside {
   box-shadow: 0 2px 5px var(--black);
 }
 
+#gotop {
+  border-width: 1.3px;
+  padding: 15px 20px;
+  color: var(--white);
+  background: var(--darkgrey);
+  text-transform: uppercase;
+  border-radius: 100px;
+  box-shadow: 0 2px 10px var(--black);
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 20px;
+  z-index: 9990;
+}
+
+#gotop:hover {
+  background: var(--grey);
+}
+
+@media only screen and (max-width: 480px) {
+  #gotop {
+    left: 10px;
+  }
+}
+
 #goto {
   display: none;
 }
@@ -276,7 +255,7 @@ aside {
   bottom: 80px;
   left: -140%;
   padding: 0;
-  transition: 0.4s;
+  transition-duration: 0.4s;
 }
 
 #gotocontent.weg {
@@ -287,26 +266,43 @@ aside {
 @media only screen and (max-width: 480px) {
   #goto {
     border-width: 1.3px;
-    padding: 15px 25px;
+    padding: 18px 15px;
     color: var(--white);
     background: var(--darkgrey);
     display: block;
     text-transform: uppercase;
-    border-radius: 15px;
+    border-radius: 100px;
     box-shadow: 0 2px 10px var(--black);
     position: fixed;
     bottom: 10px;
     right: 10px;
+    font-size: 20px;
     z-index: 9990;
   }
 
   #goto:hover {
     background: var(--grey);
-    box-shadow: 0 2px 20px var(--black);
-    padding: 16px 26px;
+  }
+
+  #st {
+    border-radius: 25px 25px 0 0;
+    margin-bottom: 5px;
+  }
+
+  #rd {
+    border-radius: 0 0 25px 25px;
+    margin-top: 5px;
+  }
+
+  #st,
+  #nd,
+  #rd {
+    display: block;
+    height: 3px;
+    width: 25px;
+    background: var(--white);
   }
 }
-
 
 footer {
   padding: 10px 20px;
@@ -321,9 +317,11 @@ footer {
   position: relative;
   transition-duration: 0.3s;
 }
+
 .mail:hover {
   color: var(--orange);
 }
+
 .mail:before {
   content: "";
   position: absolute;
@@ -336,6 +334,7 @@ footer {
   transform-origin: left;
   transition: transform 0.4s;
 }
+
 .mail:hover:before {
   transform: scaleX(1);
   transition: transform 0.4s;
