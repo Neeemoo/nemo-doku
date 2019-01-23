@@ -152,7 +152,11 @@ iframe {
 }
 
 .aufgabenTable {
-  
+  border-collapse: collapse;
+}
+
+.aufgabenTable:nth-child(even) {
+  background: var(--lightestgrey);
 }
 
 .code {
