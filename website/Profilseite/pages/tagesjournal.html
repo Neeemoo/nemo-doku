@@ -16,7 +16,8 @@
         <nav>
           <ul>
             <li><a href="../index.html">Home</a></li><!--
-         --><li><a  class="active" href="tagesjournal.html">Tagesjournal</a></li>
+         --><li><a class="active" href="tagesjournal.html">Tagesjournal</a></li><!--
+         --><li><a href="aufgaben.html">Aufgaben</a></li>
           </ul>
         </nav>
         <a href="../index.html"><img src="../img/logo.png" class="headerlogo"></a>
@@ -36,118 +37,6 @@
 
         <div class="tagesjournal">
           <h2 id="Block03">Block 03</h2>
-          <div class="iframe">
-            <button onclick="phone()" id="phone">Mobile View</button><br>
-            <iframe id="iframe" src="../iframe/aufgabe2/wildlife.html"></iframe>
-            <p class="iframeError">Das iframe ist auf dem Handy nicht zu sehen!</p>
-            <button class="accordion">Aufgabe 3</button>
-          </div>
-
-          <div class="accordionContent">
-            <h3>2. Uebung Repetition Responsive Website</h3>
-            <table class="accordionTable">
-              <tr>
-                <td><b>Ziele</b></td>
-                <td>Responsive Webseite wildlife.html</td>
-              </tr>
-              <tr>
-                <td><b>Zeit</b></td>
-                <td>30 Minuten</td>
-              </tr>
-              <tr>
-                <td><b>Ausgangslage</b></td>
-                <td>Wildlife.html mit eingebundenem Video.</td>
-              </tr>
-              <tr>
-                <td><b>Aufgabe</b></td>
-                <td>
-                  <li>Ändern Sie den Code demensprechend, dass die Seite responsive wird und Smartphones speziell begrüsst.</li>
-                  <li>Erweitern Sie den Headbereich mit dem speziellen Metatag, welches die Skalierung auf die Endgeräte anpasst. &lt;meta viewport……&gt;</li>
-                  <li>Ergänzen Sie das CSS für den Video tag, damit das Video nur immer maximal 100% Breite einnimmt.</li>
-                  <li>Integrieren Sie media queries für die Screengrösse min-width: 320px and max-width: 480px</li>
-                  <li>Der Titel „Welcome Smartphone soll nur für die oben definierten Screens erscheinen. Navigation soll wieder untereinander dargestellt sein und die Farbe wechseln.</li>
-                </td>
-              </tr>
-              <tr>
-                <td><b>Hinweis <br>Hilfsmittel</b></td>
-                <td>Einzelarbeit</td>
-              </tr>
-              <tr>
-                <td><b>Ergebnis</b></td>
-                <td>Eintrag im Moduljournal und eine fertig gestaltete Seite.</td>
-              </tr>
-            </table>
-          </div>
-
-          <button onclick="accordion()" class="codeAccordion">html</button>
-          <div class="accordionContent">
-            <pre class="code">
-&lt;body&gt;
-  &lt;div id="box"&gt;
-    &lt;header&gt;
-      &lt;h1&gt;Wildlife Video responsive&lt;/h1&gt;
-      &lt;h1 class="mob"&gt;Welcome Smartphone&lt;/h1&gt;
-      &lt;nav&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Team&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Wildlife&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-      &lt;/nav&gt;
-    &lt;/header&gt;
-    &lt;section id="video"&gt;
-      &lt;h1&gt;The Power of Nature:&lt;/h1&gt;
-      &lt;p&gt;Lassen Sie sich in die Welt der Tiere entführen und geniessen Sie knapp 2 Minuten Natur Pur. Viel Spass.&lt;/p&gt;
-      &lt;video controls preload="metadata" &gt;
-        &lt;source src="video/wildlive_fertig_ng.mp4" type="video/mp4" /&gt;
-
-        Your Browser does not support the video element.....
-      &lt;/video&gt;
-      &lt;p&gt;&lt;a href="video/wildlive_fertig_ng.mp4"&gt;Download wildlife Film (mp4)&lt;/a&gt;&lt;/p&gt;
-    &lt;/section&gt;
-    &lt;footer&gt;
-      &lt;p&gt;&copy; Modul 152 | WISS&lt;/p&gt;
-    &lt;/footer&gt;
-  &lt;/div&gt;
-
-  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"&gt;&lt;/script&gt;
-&lt;/body&gt; </pre>
-          </div>
-
-          <button onclick="accordion()" class="codeAccordion">css</button>
-          <div class="accordionContent">
-            <pre class="code">
-@media only screen and (min-width : 320px)and (max-width : 480px) {
-  h1 {
-    display: none;
-  }
-
-  .mob {
-    display: block;
-    font-size: 24px;
-    margin-bottom: 5px;
-    color: purple;
-  }
-
-  nav li {
-    display: block;
-  }
-
-  nav li a {
-    color: black;
-    font-weight: bold;
-  }
-
-  nav ul {
-    padding-top: 5px;
-  }
-
-  nav {
-    height: 70px;
-    background: yellow;
-  }
-} </pre>
-          </div>
         </div>
         <div class="tagesjournal">
           <h2 id="Block04">Block 04</h2>
@@ -193,7 +82,9 @@
 
         <h2 id="Block10">Block 10</h2>
 
-        <button onclick="extend()" id="goto">goto</button>
+        <button onclick="gotoTop()" id="gotop">&#8679;</button>
+
+        <button onclick="extend()" id="goto"><div id="st"></div><div id="nd"></div><div id="rd"></div></button>
           <table class="" id="gotocontent" onclick="extend()">
             <tr>
               <td><a href="#Block01"><li class="mobileaside">Block 01</li></a></td>

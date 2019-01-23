@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tagesjournal</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/variable.css">
+    <script src="../js/main.js"></script>
+  </head>
+  <body>
+    <div class="grid">
+      <header>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li><!--
+         --><li><a href="tagesjournal.html">Tagesjournal</a></li><!--
+         --><li><a class="active" href="aufgaben.html">Aufgaben</a></li>
+          </ul>
+        </nav>
+        <a href="../index.html"><img src="../img/logo.png" class="headerlogo"></a>
+      </header>
+
+      <main>
+
+        <h1>Aufgaben</h1>
+
+        <h2>Aufgabe 3</h2>
+        <div class="iframe">
+          <button onclick="phone()" id="phone">Mobile View</button><br>
+          <iframe id="iframe" src="../iframe/aufgabe2/wildlife.html"></iframe>
+          <p class="iframeError">Das iframe ist auf dem Handy nicht zu sehen!</p>
+        </div>
+
+          <h3>2. Uebung Repetition Responsive Website</h3>
+          <table class="aufgabenTable">
+            <tr>
+              <td><b>Ziele</b></td>
+              <td>Responsive Webseite wildlife.html</td>
+            </tr>
+            <tr>
+              <td><b>Zeit</b></td>
+              <td>30 Minuten</td>
+            </tr>
+            <tr>
+              <td><b>Ausgangslage</b></td>
+              <td>Wildlife.html mit eingebundenem Video.</td>
+            </tr>
+            <tr>
+              <td><b>Aufgabe</b></td>
+              <td>
+                <li>Ändern Sie den Code demensprechend, dass die Seite responsive wird und Smartphones speziell begrüsst.</li>
+                <li>Erweitern Sie den Headbereich mit dem speziellen Metatag, welches die Skalierung auf die Endgeräte anpasst. &lt;meta viewport……&gt;</li>
+                <li>Ergänzen Sie das CSS für den Video tag, damit das Video nur immer maximal 100% Breite einnimmt.</li>
+                <li>Integrieren Sie media queries für die Screengrösse min-width: 320px and max-width: 480px</li>
+                <li>Der Titel „Welcome Smartphone soll nur für die oben definierten Screens erscheinen. Navigation soll wieder untereinander dargestellt sein und die Farbe wechseln.</li>
+              </td>
+            </tr>
+            <tr>
+              <td><b>Hinweis <br>Hilfsmittel</b></td>
+              <td>Einzelarbeit</td>
+            </tr>
+            <tr>
+              <td><b>Ergebnis</b></td>
+              <td>Eintrag im Moduljournal und eine fertig gestaltete Seite.</td>
+            </tr>
+          </table>
+
+  <pre class="code">
+&lt;body&gt;
+&lt;div id="box"&gt;
+&lt;header&gt;
+&lt;h1&gt;Wildlife Video responsive&lt;/h1&gt;
+&lt;h1 class="mob"&gt;Welcome Smartphone&lt;/h1&gt;
+&lt;nav&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;Team&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;Wildlife&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/header&gt;
+&lt;section id="video"&gt;
+&lt;h1&gt;The Power of Nature:&lt;/h1&gt;
+&lt;p&gt;Lassen Sie sich in die Welt der Tiere entführen und geniessen Sie knapp 2 Minuten Natur Pur. Viel Spass.&lt;/p&gt;
+&lt;video controls preload="metadata" &gt;
+&lt;source src="video/wildlive_fertig_ng.mp4" type="video/mp4" /&gt;
+
+Your Browser does not support the video element.....
+&lt;/video&gt;
+&lt;p&gt;&lt;a href="video/wildlive_fertig_ng.mp4"&gt;Download wildlife Film (mp4)&lt;/a&gt;&lt;/p&gt;
+&lt;/section&gt;
+&lt;footer&gt;
+&lt;p&gt;&copy; Modul 152 | WISS&lt;/p&gt;
+&lt;/footer&gt;
+&lt;/div&gt;
+
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt; </pre>
+<br>
+  <pre class="code">
+@media only screen and (min-width : 320px)and (max-width : 480px) {
+h1 {
+display: none;
+}
+
+.mob {
+display: block;
+font-size: 24px;
+margin-bottom: 5px;
+color: purple;
+}
+
+nav li {
+display: block;
+}
+
+nav li a {
+color: black;
+font-weight: bold;
+}
+
+nav ul {
+padding-top: 5px;
+}
+
+nav {
+height: 70px;
+background: yellow;
+}
+} </pre>
+
+        <button onclick="gotoTop()" id="gotop">&#8679;</button>
+
+        <button onclick="extend()" id="goto"><div id="st"></div><div id="nd"></div><div id="rd"></div></button>
+        <table class="" id="gotocontent" onclick="extend()">
+          <tr>
+            <td><a href="#Block01"><li class="mobileaside">Block 01</li></a></td>
+            <td><a href="#Block02"><li class="mobileaside">Block 02</li></a></td>
+          </tr>
+        </table>
+      </main>
+
+      <aside>
+        <ul>
+          <a href="#Block01"><li class="aside">Block 01</li></a>
+          <a href="#Block02"><li class="aside">Block 02</li></a>
+          <a href="#Block03"><li class="aside">Block 03</li></a>
+          <a href="#Block04"><li class="aside">Block 04</li></a>
+          <a href="#Block05"><li class="aside">Block 05</li></a>
+          <a href="#Block06"><li class="aside">Block 06</li></a>
+          <a href="#Block07"><li class="aside">Block 07</li></a>
+          <a href="#Block08"><li class="aside">Block 08</li></a>
+          <a href="#Block09"><li class="aside">Block 09</li></a>
+          <a href="#Block10"><li class="aside">Block 10</li></a>
+        </ul>
+      </aside>
+
+      <footer>
+        <h2>Kontakt</h2>
+        <p>Noé Lüthold <br>
+          Delfterstrasse 24 <br>
+          5004 Aarau</p>
+        <p>Mobile: 078 720 45 49 <br>
+          E-Mail: <a class="mail" href="mailto:noeamon@gmail.com">noeamon@gmail.com</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
