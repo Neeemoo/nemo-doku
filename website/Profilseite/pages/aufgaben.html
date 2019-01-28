@@ -16,7 +16,8 @@
           <ul>
             <li><a href="../index.html">Home</a></li><!--
          --><li><a href="tagesjournal.html">Tagesjournal</a></li><!--
-         --><li><a class="active" href="aufgaben.html">Aufgaben</a></li>
+         --><li><a class="active" href="aufgaben.html">Aufgaben</a></li><!--
+         --><li><a href="hanoks.html">hanoks</a></li>
           </ul>
         </nav>
         <a href="../index.html"><img src="../img/logo.png" class="headerlogo"></a>
@@ -26,7 +27,7 @@
 
         <h1>Aufgaben</h1>
 
-        <h2>Aufgabe 3</h2>
+        <h2 class="uebung">Aufgabe Responsive Wildlife</h2>
         <div class="iframe">
           <button onclick="phone()" id="phone">Mobile View</button><br>
           <iframe id="iframe" src="../iframe/aufgabe2/wildlife.html"></iframe>
@@ -66,70 +67,39 @@
               <td>Eintrag im Moduljournal und eine fertig gestaltete Seite.</td>
             </tr>
           </table>
+        <br><br>
 
-  <pre class="code">
-&lt;body&gt;
-&lt;div id="box"&gt;
-&lt;header&gt;
-&lt;h1&gt;Wildlife Video responsive&lt;/h1&gt;
-&lt;h1 class="mob"&gt;Welcome Smartphone&lt;/h1&gt;
-&lt;nav&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#"&gt;Team&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#"&gt;Wildlife&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/nav&gt;
-&lt;/header&gt;
-&lt;section id="video"&gt;
-&lt;h1&gt;The Power of Nature:&lt;/h1&gt;
-&lt;p&gt;Lassen Sie sich in die Welt der Tiere entführen und geniessen Sie knapp 2 Minuten Natur Pur. Viel Spass.&lt;/p&gt;
-&lt;video controls preload="metadata" &gt;
-&lt;source src="video/wildlive_fertig_ng.mp4" type="video/mp4" /&gt;
+          <a class="code" target="_blank" href="../code/Tag-2/wildlife/wildlife_html">HTML Code</a>
+          <a class="code" target="_blank" href="../code/Tag-2/wildlife/wildlife_css">CSS Code</a>
 
-Your Browser does not support the video element.....
-&lt;/video&gt;
-&lt;p&gt;&lt;a href="video/wildlive_fertig_ng.mp4"&gt;Download wildlife Film (mp4)&lt;/a&gt;&lt;/p&gt;
-&lt;/section&gt;
-&lt;footer&gt;
-&lt;p&gt;&copy; Modul 152 | WISS&lt;/p&gt;
-&lt;/footer&gt;
-&lt;/div&gt;
 
-&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"&gt;&lt;/script&gt;
-&lt;/body&gt; </pre>
-<br>
-  <pre class="code">
-@media only screen and (min-width : 320px)and (max-width : 480px) {
-h1 {
-display: none;
-}
+        <br><br><br>
 
-.mob {
-display: block;
-font-size: 24px;
-margin-bottom: 5px;
-color: purple;
-}
+        <h2 class="uebung">Aufgabe Audio / Video</h2>
 
-nav li {
-display: block;
-}
+        <audio src="../audio/Kalimba_01.flac" type="audio/flac" controls>
+          Your Browser does not support this audio element...
+        </audio>
+        <audio src="../audio/Kalimba_short.wav" type="audio/wav" controls>
+          Your Browser does not support this audio element...
+        </audio>
+        <audio src="../audio/Kalimba.mp3" type="audio/mp3" controls>
+          Your Browser does not support this audio element...
+        </audio>
+        <audio src="../audio/Kalimba.ogg" type="audio/ogg" controls>
+          Your Browser does not support this audio element...
+        </audio>
+        <audio src="../audio/Kalimba.opus" type="audio/opus" controls>
+          Your Browser does not support this audio element...
+        </audio>
 
-nav li a {
-color: black;
-font-weight: bold;
-}
+        <br><br>
 
-nav ul {
-padding-top: 5px;
-}
-
-nav {
-height: 70px;
-background: yellow;
-}
-} </pre>
+        <video controls>
+          <source src="../video/movie.mp4" type="video/mp4">
+          <source src="../video/movie.ogv" type="video/ogv">
+          <source src="../video/movie.webm" type="video/webm">
+        </video>
 
         <button onclick="gotoTop()" id="gotop">&#8679;</button>
 

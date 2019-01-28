@@ -20,7 +20,6 @@ function phone() {
   }
 }
 
-
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
