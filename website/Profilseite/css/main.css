@@ -90,11 +90,32 @@ h1 {
   text-transform: uppercase;
 }
 
+.cv-h3 {
+  text-align: center;
+  text-decoration: underline var(--verylightgrey);
+}
+
+.cv-table {
+    border: 1px solid var(--black);
+    padding: 5px;
+    border-radius: 10px 10px 10px 10px;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: left;
+    transition: all 0.2s;
+}
+
+.cv-table:hover {
+    background: var(--lightestgrey);
+}
+
+
 .tagesjournal {
   margin-bottom: 50px;
 }
 
-main > ul {
+.content-list {
   margin-left: 20px;
 }
 

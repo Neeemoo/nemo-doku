@@ -32,29 +32,29 @@
            Wir haben erstmal erfahren das wir bis ende des Modules eine Gruppenarbeit machen müssen, welche dann benotet wird, dafür wird es keine Schriftliche Prüfung geben (ZP). Bei dieser Gruppenarbeit müssen wir ein Erklärungsvideo machen über ein beliebiges Thema, welches mit der Webentwicklung zu tun hat. Dazu müssen wir dann noch eine Webseite mit verschiedenen Vorschriften erstellen welche Informationen zu oder über das Video bietet.
            Zu der oben erwähnten Note kommt auch noch eine Webseite dazu welche jede Person einzeln machen muss. Das ziel bei dem erstellen dieser Webseite ist das man den Vorschriften entsprechend eine responsive Webseite erstellt und diese natürlich auch übersichtlich gestaltet.
            Der Rest in diesem Modul ist normal. Er wird am ende ein Moduljournal zur Abgabe erwartet und es wird eine Leistungsbeurteilung gehalten.
-           Danach haben wir noch über einige begriffe geredet wie z.B. die verschiedenen Bild Dateien:</p>
-          <br><strong>JPG</strong>
-          <ul>
+           Danach haben wir noch über einige begriffe geredet wie z.B. die verschiedenen Bild Dateien:
+          <br><br><strong>JPG</strong>
+          <ul class="content-list">
             <li>keine Transparenz</li>
             <li>besitzt 16.7 Mio. Farben bzw. 24 Bit</li>
             <li>verliert Qualität bei Komprimierung</li>
             <li>Farbverläufe</li>
           </ul>
           <br><strong>GIF</strong>
-          <ul>
+          <ul class="content-list">
             <li>Transparenz</li>
             <li>keine Farbverläufe</li>
             <li>Animationen</li>
             <li>256 Farben bzw. 8 Bit</li>
           </ul>
           <br><strong>PNG</strong>
-          <ul>
+          <ul class="content-list">
             <li>Transparenz</li>
             <li>in 8 Bit oder 24 Bit</li>
             <li>verlustfreie Komprimierung</li>
           </ul>
           <br><strong>SVG</strong>
-          <ul>
+          <ul class="content-list">
             <li>Transparenz</li>
             <li>verlustfreie Komprimierung</li>
             <li>Animation</li>
@@ -62,41 +62,83 @@
             <li>kann als Code eingefügt werden</li>
           </ul>
           <br><strong>Standardauflösungen</strong>
-          <ul>
+          <ul class="content-list">
             <li>Smartphones: 320px bis 480px</li>
             <li>Tablets: 768px bis 1024px</li>
             <li>Computer-Desktop: > 1024px</li>
           </ul>
         </p>
-        <div class="placeholder"></div>
 
         <h2 id="Block02">Block 02</h2>
-        <div class="placeholder"></div>
+        <p>In diesem Block haben wir erstmal angeschaut wie man eine Webseite überhaupt Responsive machen kann da wir dieses Wissen für unsere Profilseite benötigen. Dabei haben wir gelernt, dass man beim Erstellen einer Webseite immer zuerst an die Mobile View denken muss und erst danach die Webseite für den Desktop Benutzer zu optimieren da dies viel weniger Aufwand bedeutet.
+           Um eine Webseite ohne Hilfsmittel Responsive zu machen benötigt man 4 schritte:
+           <br><br>
+          <strong>1.	HTML im &lt;head&gt;</strong>
+          <ul class="content-list">
+            <li>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</li>
+          </ul>
+          <br><strong>2.	HTML</strong>
+          <ul class="content-list">
+            <li>Danach muss man noch die Navigation anpassen und Tabellen sollte man nicht verwenden da Blindenprogramme dies nicht korrekt interpretieren.</li>
+          </ul>
+          <br><strong>3.	CSS</strong>
+          <ul class="content-list">
+            <li>Im CSS sollte man noch "@media only screen and (max-width: 480px)" benutzen, diesen Befehl werden wir später noch genauer anschauen.</li>
+          </ul>
+          <br><strong>4.	CSS</strong>
+          <ul class="content-list">
+            <li>schlussendlich sollte man noch Bilder und Videos responsivem machen, dies wird gemacht indem festgelegt wird wie breit es maximal sein darf mit "max-width: 100%".</li>
+          </ul>
+         </p>
 
         <div class="tagesjournal">
           <h2 id="Block03">Block 03</h2>
+          <p>In diesem Block haben wir Icons und Logos angeschaut.</p><br>
+          <p>Icons kann man z.B. von der Webseite www.icomoon.io herunterladen und diese anschliessend im CSS einbinden.</p><br>
+          <p>Danach haben wir Logos angeschaut, zuerst haben wir festgestellt das es verschiedene arten von Grafiken gibt. Erstmal gibt es Pixelbasierte Grafiken und Vektorgrafiken. Um eine Pixelbasierte Grafik zu erstellen haben wir Gimp benutzt welches ein gratis Programm ist und auch häufig schon vorinstalliert. Um eine Vektorgrafik zu erstellen haben wir Inkscape benutzt welches auch wie Gimp ein gratis Programm ist jedoch ist dieses nicht vorinstalliert, wir habe jedoch auch erfahren das man andere Programme wie Photoshop oder Illustrator benutzen kann.</p>
         </div>
         <div class="tagesjournal">
           <h2 id="Block04">Block 04</h2>
-          <div class="placeholder"></div>
+          <p>Am Anfang von diesem Block hatten wir zuerst zeit an den Aufgaben vom Tag 2
+          (Block 3 & 4) zu weiterarbeiten.</p><br>
+          <p>Dabei bin ich auf eine Aufgabe gestossen, bei welcher ich grosse Probleme hatte. Bei dieser Aufgabe ging es drum beim Hovern auf ein logo dies grau zu färben und um 180° drehen muss. Eigentlich ist dies ziemlich einfach doch ich kannte einige dieser befehle nicht.</p>
+          Dies sind die wichtigsten befehle:</p><br>
+          <ul class="content-list">
+            <li>transition: all 1s;</li>
+            <li>filter: grayscale(100%);</li>
+            <li>-webkit-filter: grayscale(100%);</li>
+            <li>transform: rotate(-180deg);</li>
+            <li>-webkit-transform:rotate(-180deg);</li>
+          </ul><br>
+          <p>Zunächst wurde uns noch klar gemacht, dass man vorsichtig sein muss, wenn man eine Schriftart für seine Webseite benutzen will da nicht alle gratis zur Verfügung stehen. Manchmal benötigt man zum benutzen dieser Schriftarten eine Lizenz. Dies kann zu Geldstrafen kommen, wenn man dies Ignoriert.</p>
         </div>
 
         <h2 id="Block05">Block 05</h2>
-        <div class="placeholder"></div>
+        <p>In diesem Block haben wir Favicons angeschaut, dieser Ausdruck war für mich Komplet neu. Ich wusste zwar, dass es solche Bilder geben, die für das zuständig sind habe diesen Ausdruck jedoch noch nie gehört.</p><br>
+        <p>Favicons sind die Bilder welch man neben dem Seiten Namen oben über der URL sieht.</p><br>
+        <p>Da es nicht reicht, wenn man nur ein Bild benutzt da auf jedem gerät eine andere Grösse notwendig ist kann man verschiedene Webseiten benutzen, die das für einen übernehmen.</p>
+
 
         <h2 id="Block06">Block 06</h2>
-        <div class="placeholder"></div>
+        <p>In diesem Block haben wir besprochen wie man einen Responsive Slider machen kann und mit Lightbox2 eine Galerie.</p><br>
+        <p>Lightbox2 mussten wir natürlich zuerst einbinden welches wir im head Bereich des gewünschten HTML Files geamcht haben.</p>
+        <p>Am anfang hatte ich einige Probleme mit diesem Plugin jedoch fand ich mich nach einer weile einigermassen gut zurecht.
+        Danach haben wir noch mitbekommen das solch ein Slider und eine Galerie auf der Webseite vorhanden sein muss, zuerst dachen alle das es auf der Profilseite sein muss jedoch meine die Lehrperson die Webseite für die Gruppenarbeit.</p><br>
+        <p>Danach haben wir noch mitbekommen das solch ein Slider und eine Galerie auf der Webseite vorhanden sein muss, zuerst dachen alle das es auf der Profilseite sein muss jedoch meine die Lehrperson die Webseite für die Gruppenarbeit.</p>
 
         <h2 id="Block07">Block 07</h2>
-
+        <p>In diesem Block haben wir uns mit Audio und Video Dateien auseinandergesetzt und gelernt wie man diese einbindet.</p>
+        <p>Das Audio und Video tag funktioniert eigentlich gleich. Wenn man mehrere verlinkt wird immer die Datei benutzt die als erstes gelesen werden kann.</p><br>
+        <p>Danach mussten wir noch einige Videos zusammenschneiden mit Openshot womit ich einige start schwierigkeiten hatte.</p>
 
         <h2 id="Block08">Block 08</h2>
-        <div class="placeholder"></div>
+        <p>In diesem Block haben ich und meine Gruppe an der Gruppenarbeit weitergearbeitet, genauer gesagt haben wir das Video geplant, welches wir brauchen neben bei haben wir auch noch ein bisschen an der Gruppen Webseite gearbeitet.</p>
 
         <h2 id="Block09">Block 09</h2>
-        <div class="placeholder"></div>
+        <p>In diesem Block war unsere Lehrperson nicht anwesend und somit haben wir selbständig gearbeitet.</p>
 
         <h2 id="Block10">Block 10</h2>
+        <p>In diesem Block haben wir die Leistungsbeurteilung.</p>
 
         <button onclick="gotoTop()" id="gotop">&#8679;</button>
 
