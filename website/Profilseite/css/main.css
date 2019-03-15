@@ -153,6 +153,7 @@ iframe {
 }
 
 #phone {
+  cursor: pointer;
   width: 574px;
   background: var(--darkgrey);
   color: var(--white);
@@ -207,6 +208,20 @@ video {
   max-width: 100%;
 }
 
+#commingsoon {
+  color: var(--red);
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 100px 0;
+  border: 2px solid var(--darkgrey);
+  border-radius: 20px;
+}
+
+#commingsoon:hover {
+  background: var(--lightestgrey);
+}
+
 #Block01 {
   padding-bottom: 13.4px;
 }
@@ -259,6 +274,7 @@ aside {
 }
 
 #gotop {
+  cursor: pointer;
   border-width: 1.3px;
   padding: 15px 20px;
   color: var(--white);
