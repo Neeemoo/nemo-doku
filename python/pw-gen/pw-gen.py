@@ -1,106 +1,107 @@
 import random
 
+code = ''
+
 print("Geben Sie die Länge des Codes ein")
-laenge = input()
+laenge = int(input())
 
 for _ in range(laenge):
-    value = random.randint(0, 87)
+    value = random.randint(0, 85)
 
-    def numbers_to_strings(value):
-        switcher = {
-            0: char = 'A',
-            1: char = 'B',
-            2: char = 'C',
-            3: char = 'D',
-            4: char = 'E',
-            5: char = 'F',
-            6: char = 'G',
-            7: char = 'H',
-            8: char = 'I',
-            9: char = 'J',
-            10: char = 'K',
-            11: char = 'L',
-            12: char = 'M',
-            13: char = 'N',
-            14: char = 'O',
-            15: char = 'P',
-            16: char = 'Q',
-            18: char = 'R',
-            19: char = 'S',
-            20: char = 'T',
-            21: char = 'U',
-            22: char = 'V',
-            23: char = 'W',
-            24: char = 'X',
-            25: char = 'Y',
-            26: char = 'Z',
+    # big letters
+    if value == 0: char = 'A'
+    elif value == 1: char = 'B'
+    elif value == 2: char = 'C'
+    elif value == 3: char = 'D'
+    elif value == 4: char = 'E'
+    elif value == 5: char = 'F'
+    elif value == 6: char = 'G'
+    elif value == 7: char = 'H'
+    elif value == 8: char = 'I'
+    elif value == 9: char = 'J'
+    elif value == 10: char = 'K'
+    elif value == 11: char = 'L'
+    elif value == 12: char = 'M'
+    elif value == 13: char = 'N'
+    elif value == 14: char = 'O'
+    elif value == 15: char = 'P'
+    elif value == 16: char = 'Q'
+    elif value == 17: char = 'R'
+    elif value == 18: char = 'S'
+    elif value == 19: char = 'T'
+    elif value == 20: char = 'U'
+    elif value == 21: char = 'V'
+    elif value == 22: char = 'W'
+    elif value == 23: char = 'X'
+    elif value == 24: char = 'Y'
+    elif value == 25: char = 'Z'
 
-            27: char = 'a',
-            28: char = 'b',
-            29: char = 'c',
-            30: char = 'd',
-            31: char = 'e',
-            32: char = 'f',
-            33: char = 'g',
-            34: char = 'h',
-            35: char = 'i',
-            36: char = 'j',
-            37: char = 'k',
-            38: char = 'l',
-            39: char = 'm',
-            40: char = 'n',
-            41: char = 'o',
-            42: char = 'p',
-            43: char = 'q',
-            44: char = 'r',
-            45: char = 's',
-            46: char = 't',
-            47: char = 'u',
-            48: char = 'v',
-            49: char = 'w',
-            50: char = 'x',
-            51: char = 'y',
-            52: char = 'z',
+    # small letters
+    elif value == 26: char = 'a'
+    elif value == 27: char = 'b'
+    elif value == 28: char = 'c'
+    elif value == 29: char = 'd'
+    elif value == 30: char = 'e'
+    elif value == 31: char = 'f'
+    elif value == 32: char = 'g'
+    elif value == 33: char = 'h'
+    elif value == 34: char = 'i'
+    elif value == 35: char = 'j'
+    elif value == 36: char = 'k'
+    elif value == 37: char = 'l'
+    elif value == 38: char = 'm'
+    elif value == 39: char = 'n'
+    elif value == 40: char = 'o'
+    elif value == 41: char = 'p'
+    elif value == 42: char = 'q'
+    elif value == 43: char = 'r'
+    elif value == 44: char = 's'
+    elif value == 45: char = 't'
+    elif value == 46: char = 'u'
+    elif value == 47: char = 'v'
+    elif value == 48: char = 'w'
+    elif value == 49: char = 'x'
+    elif value == 50: char = 'y'
+    elif value == 51: char = 'z'
 
-            53: char = '0',
-            54: char = '1',
-            55: char = '2',
-            56: char = '3',
-            57: char = '4',
-            58: char = '5',
-            59: char = '6',
-            60: char = '7',
-            61: char = '8',
-            62: char = '9',
 
-            63: char = '+',
-            64: char = '"',
-            65: char = '*',
-            66: char = 'ç',
-            67: char = '%',
-            68: char = '&',
-            69: char = '/',
-            70: char = '(',
-            71: char = ')',
-            72: char = '=',
+    elif value == 52: char = '0'
+    elif value == 53: char = '1'
+    elif value == 54: char = '2'
+    elif value == 55: char = '3'
+    elif value == 56: char = '4'
+    elif value == 57: char = '5'
+    elif value == 58: char = '6'
+    elif value == 59: char = '7'
+    elif value == 60: char = '8'
+    elif value == 61: char = '9'
 
-            73: char = '@',
-            74: char = '#',
-            75: char = '¢',
-            76: char = '$',
-            77: char = '£',
-            78: char = '[',
-            79: char = ']',
-            80: char = '{',
-            81: char = '}',
-            82: char = ',',
-            83: char = ';',
-            84: char = '.',
-            85: char = ':',
-            86: char = '-',
-            87: char = '_',
-        }
-        return switcher.get(value, "nothing")
-    password = password + char
+    # special chars
+    elif value == 62: char = '+'
+    elif value == 63: char = '*'
+    elif value == 64: char = '?'
+    elif value == 65: char = '%'
+    elif value == 66: char = '&'
+    elif value == 67: char = '/'
+    elif value == 68: char = '('
+    elif value == 69: char = ')'
+    elif value == 70: char = '='
+    elif value == 71: char = '!'
+    elif value == 72: char = '$'
+    elif value == 73: char = '£'
+    elif value == 74: char = '-'
+    elif value == 75: char = '_'
+    elif value == 76: char = ','
+    elif value == 77: char = ';'
+    elif value == 78: char = '.'
+    elif value == 79: char = ':'
+    elif value == 80: char = '['
+    elif value == 81: char = ']'
+    elif value == 82: char = '{'
+    elif value == 83: char = '}'
+    elif value == 84: char = '<'
+    elif value == 85: char = '>'
 
-print (password)
+    code += str(char)
+
+print(code)
