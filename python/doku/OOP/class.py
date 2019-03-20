@@ -36,3 +36,11 @@ class Rocket():
 #
 # for rocket in myRockets:
 #     print(rocket)
+
+#ROCKET FLEET 1 LINE
+# myRockets = [Rocket() for x in range(0,5)]
+#
+# myRockets[0].moveUp()
+#
+# for rocket in myRockets:
+#     print("Rocket altitude: ", rocket.y)
