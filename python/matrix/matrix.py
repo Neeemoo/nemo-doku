@@ -1,28 +1,16 @@
-print()
-print("g")
-import time
-time.sleep(0.5)
+from tkinter import *
 
-print("2")
-import time
-time.sleep(0.5)
+root = Tk()
+root.configure(background='black')
+w = 300
+h = 200
+x = 50
+y = 100
+root.geometry("%dx%d+%d+%d" % (w, h, x, y))
 
-print("&")
-import time
-time.sleep(0.5)
+label = Label(root, text='a', fg='#20C20E')
+label.configure(background='black')
+label.place(x=1, y=1)
+label.pack()
 
-print("*")
-import time
-time.sleep(0.5)
-
-print("2")
-import time
-time.sleep(0.5)
-
-print("n")
-import time
-time.sleep(0.5)
-
-print("L")
-import time
-time.sleep(0.5)
+root.mainloop()
