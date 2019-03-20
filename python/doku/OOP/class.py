@@ -14,14 +14,25 @@ class Rocket():
         self.y -= 1
 
     #create a object in the class Rocket with the name myRocket
-    myRocket = Rocket()
-    print("Rocket altitude: ", myRocket.y)
 
-    myRcket.moveUp
-    print("Rocket altitude: ", myRocket.y)
+#MOVE ROCKET BACK AND FORWARD
+# myRocket = Rocket()
+# print("Rocket altitude: ", myRocket.y)
+#
+# myRocket.moveUp()
+# print("Rocket altitude: ", myRocket.y)
+#
+# myRocket.moveDown()
+# print("Rocket altitude: ", myRocket.y)
+#
+# myRocket.moveUp()
+# print("Rocket altitude: ", myRocket.y)
 
-    myRcket.moveDown
-    print("Rocket altitude: ", myRocket.y)
-
-    myRcket.moveUp
-    print("Rocket altitude: ", myRocket.y)
+#ROCKET FLEET
+# myRockets = []
+# for x in range (0, 5):
+#     newRocket = Rocket()
+#     myRockets.append(newRocket)
+#
+# for rocket in myRockets:
+#     print(rocket)
