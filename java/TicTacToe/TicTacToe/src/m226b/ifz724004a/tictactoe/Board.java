@@ -45,7 +45,7 @@ public class Board {
 			}
 			
 			if (x != row - 1) {
-			strBoard = strBoard + "\n---|---|---\n";
+				strBoard = strBoard + "\n---|---|---\n";
 			}
 		}
 		System.out.println("\n");
