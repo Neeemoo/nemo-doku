@@ -1,9 +1,9 @@
 package m226b.ifz724004a.tictactoe;
 
 	/**
- 	 * @author Noé Lüthold
+ 	 * @author NoÃ© LÃ¼thold
  	 * @version 1.4
- 	 * Die Klasse Board ist für das Sielfeld zuständig
+ 	 * Die Klasse Board ist fÃ¼r das Spielfeld zustÃ¤ndig
  	 */
 
 public class Board {		
@@ -12,14 +12,14 @@ public class Board {
 	private static final int col = 3;
 
 	/**
-	 * Board ist ein Konstruktor welcher dem board die grösse angibt
+	 * Board ist ein Konstruktor welcher dem board die grÃ¶sse angibt
 	 */
 	public Board() {
 		board = new String[row][col];
 	}
 	
 	/**
-	 * initializeBoard ist dafür zuständig das wenn kein wert in einem feld ist das es 3 leerschläge drin hat damit das board trozdem die gewünschte form hat
+	 * initializeBoard ist dafÃ¼r zustÃ¤ndig das wenn kein wert in einem feld ist das es 3 leerschlÃ¤ge drin hat damit das board trozdem die gewÃ¼nschte form hat
 	 */
 	public void initializeBoard() {
 		for (int x = 0; x < row; x++) {
@@ -31,7 +31,7 @@ public class Board {
 	
 	/**
 	 * printBoard zeichnet die grenzen der verschiedenen Felder vom board damit es aussieht wie ein TicTacToe board
-	 * @return Es gibt das entgültige board zurück
+	 * @return Es gibt das entgÃ¼ltige board zurÃ¼ck
 	 */
 	public String printBoard() {
 		String strBoard = "";
@@ -53,7 +53,7 @@ public class Board {
 	}
 	
 	/**
-	 * firstPrint druckt ein TicTacToe board aus welches nichts mit dem eigentlichen board zusammenhängt.
+	 * firstPrint druckt ein TicTacToe board aus welches nichts mit dem eigentlichen board zusammenhÃ¤ngt.
 	 * Es sieht nur so aus und ist dazu da um die Tasten zum spielen zu zeigen
 	 */
 	public void firstPrint() {
